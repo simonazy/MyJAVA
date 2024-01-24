@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Shows</title>
+    </head>
+    <body>
+        <h2>IMDB: Top 5 Episodes</h2>
+        <table width="100%", border="solid">
+            <tr>
+                <th>Title</th>
+                <th>Episode</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <th>Breaking Bad</th>
+                <th>Ozymandias</th>
+                <th>10.0</th>
+            </tr>
+            <tr>
+                <th>Attack on Titan</th>
+                <th>Hero</th>
+                <th>8.0</th>
+            </tr>
+            <tr>
+                <th>Robot</th>
+                <th>407 Authenticate</th>
+                <th>8.0</th>
+            </tr>
+            <tr>
+                <th>Renvenge</th>
+                <th>Killer</th>
+                <th>5.0</th>
+            </tr>
+            <tr th:Object="${ep}">
+                <th th:text ="*{title}">Renvenge</th>
+                <th th:text="*{episode}">Killer</th>
+                <th th:text="*{rating}">5.0</th>
+            </tr>
+        </table>
+    </body>
+</html>
